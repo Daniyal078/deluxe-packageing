@@ -54,3 +54,20 @@ a {
 .accordion-button::after {
     background-image: url('public/images/rounded plus icon.png');
 }
+
+
+.slick-next:before,
+.slick-prev:before {
+    color: #ff0000;
+    font-size: 30px;
+}
+
+
+.slick-prev{
+    left: 20px;
+    z-index: 2;
+}
+
+.slick-next{
+    right: 30px;
+}
