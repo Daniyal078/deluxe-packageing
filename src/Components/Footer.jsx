@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaPaperPlane } from 'react-icons/fa'
+import { Link, NavLink } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -12,14 +13,11 @@ const Footer = () => {
                                 <div>
                                     <img src={'public/images/DP-logo.png'} alt="" />
                                 </div>
-
                                 <div className='mt-3'>
                                     <FaLinkedin className='bg-main p-2 fs-1 mx-2 rounded-circle text-white' />
                                     <FaFacebook className='bg-main p-2 fs-1 mx-2 rounded-circle text-white' />
                                     <FaInstagram className='bg-main p-2 fs-1 mx-2 rounded-circle text-white' />
                                 </div>
-
-
                             </div>
                             <div className="col-lg-3 col-md-4 mb-lg-0 mb-4">
                                 <div className="fw-bold fs-5 mb-3 text-uppercase">Equipment</div>
@@ -27,7 +25,7 @@ const Footer = () => {
                                     <li className="my-2 fw-semibold"><a href="#">BOBST AMBITION 110</a></li>
                                     <li className="my-2 fw-semibold"><a href="#">CRON CTP</a></li>
                                     <li className="my-2 fw-semibold"><a href="#">EPSON STYLUS PRO</a></li>
-                                    <li className="my-2 fw-semibold"><a href="#">KBA RAPIDA 106-7</a></li>
+                                    <li className="my-2 fw-semibold"><Link to="/Equipment#rapida">KBA RAPIDA 106-7</Link></li>
                                     <li className="my-2 fw-semibold"><a href="#">NOVA CUT 106</a></li>
                                     <li className="my-2 fw-semibold"><a href="#">X-RITE EXACT</a></li>
                                     <li className="my-2 fw-semibold"><a href="#">X-RITE ICPLATE 2</a></li>
@@ -35,7 +33,6 @@ const Footer = () => {
                             </div>
                             <div className="col-lg-3 col-md-4 mb-lg-0 mb-4">
                                 <div className="fw-bold fs-5 mb-3 text-uppercase">QUICK LINKS</div>
-
                                 <ul className="list-unstyled">
                                     <li className="my-2 fw-semibold"><a href="#">About Us</a></li>
                                     <li className="my-2 fw-semibold"><a href="#">Processing</a></li>
@@ -51,7 +48,6 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-
 
                     <div className="">
                         <div className="py-4 container fw-semibold border-top border-dark text-center">

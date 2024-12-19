@@ -1,6 +1,27 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_26gy2sl', 'template_vqdo979', form.current, { publicKey: 'xmPdhc3XhfH-TuVWq', })
+            .then(
+                () => {
+                    alert('SUCCESS!');
+
+                },
+                (error) => {
+                    alert('FAILED...', error.text);
+                },
+            );
+    };
+
+
     return (
         <>
             <section className='py-5 bg-white rounded-5'>
@@ -9,18 +30,18 @@ const ContactForm = () => {
                         <div className='fw-bold text-center fs-5'>Your inquiry will be responded promptly</div>
                         <div className='text-center fw-semibold text-danger'>Your inquiry will be responded promptly</div>
 
-                        <form action="#">
+                        <form ref={form} onSubmit={sendEmail}>
                             <div className="row">
                                 <div className="col-lg-6">
                                     <div>
                                         <label className='my-3 fw-semibold' htmlFor="">First name*</label>
-                                        <input type="text" className='form-control py-2 bg-light border-0' />
+                                        <input type="text" name='from_name' className='form-control py-2 bg-light border-0' />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
                                     <div>
                                         <label className='my-3 fw-semibold' htmlFor="">Last name*</label>
-                                        <input type="text" className='form-control py-2 bg-light border-0' />
+                                        <input type="text" name='form_last_name' className='form-control py-2 bg-light border-0' />
                                     </div>
                                 </div>
                             </div>
@@ -28,28 +49,28 @@ const ContactForm = () => {
                                 <div className="col-lg-6">
                                     <div>
                                         <label className='my-3 fw-semibold' htmlFor="">Email*</label>
-                                        <input type="email" className='form-control py-2 bg-light border-0' />
+                                        <input type="email" name='from_email' className='form-control py-2 bg-light border-0' />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
                                     <div>
                                         <label className='my-3 fw-semibold' htmlFor="">Phone number*</label>
-                                        <input type="text" className='form-control py-2 bg-light border-0' />
+                                        <input type="text" name='from_phone' className='form-control py-2 bg-light border-0' />
                                     </div>
                                 </div>
                             </div>
 
-                            <textarea name="" id="" rows={'4'} className='form-control py-2 bg-light border-0 mt-3'></textarea>
 
-                            <button className='btn bg-main mt-4 text-white px-3 py-2'>Upload Image</button>
 
-                            <div className='fw-semibold my-3'>Accepted file types: jpeg, jpg, png, gif, Max. file size: 16 MB.</div>
 
-                            <button className='btn bg-black fw-semibold w-100 text-white py-2'>Send</button>
+                            <textarea name="message" id="" rows={'4'} className='form-control py-2 bg-light border-0 my-3'></textarea>
+
+                            <button type='submit' value={'Send'} className='btn bg-black fw-semibold w-100 text-white py-2'>Send</button>
                         </form>
                     </div>
                 </div>
             </section>
+
         </>
     )
 }

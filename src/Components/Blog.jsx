@@ -1,12 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import GSAP from './GSAP'
+
 
 const Blog = () => {
+
     return (
         <>
             <section className='bg-main-light'>
                 <div className='bg-white rounded-bottom-5 py-5'>
-                    <div class="container">
+                    <div class="container fadeLeft">
                         <div className='display-5 fw-bold'>Blog.</div>
                         <div className='fs-5'>"Discover the transformative power of Endolift: a cutting-edge,
                             non-surgical treatment for skin tightening, fat reduction, and rejuvenation."</div>
@@ -18,10 +21,10 @@ const Blog = () => {
 
             <section className='bg-main-light py-5'>
                 <div className="container">
-                    <img class="mb-4" src="public/images/image-30498.png" width="100%" alt="" />
+                    <img class="mb-4 fadeUp" src="public/images/image-30498.png" width="100%" alt="" />
 
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 FadeUp mb-3">
+                        <div class="col-lg-4 col-md-6 fadeUp mb-3">
                             <NavLink to="/blog-detail">
                                 <div class="border p-2 rounded-3 bg-white">
                                     <img src="public/images/image-24534.png" width="100%" alt="" />
@@ -39,7 +42,7 @@ const Blog = () => {
                                 </div>
                             </NavLink>
                         </div>
-                        <div class="col-lg-4 col-md-6 FadeUp mb-3">
+                        <div class="col-lg-4 col-md-6 fadeUp mb-3">
                             <NavLink to="/blog-detail">
                                 <div class="border p-2 rounded-3 bg-white">
                                     <img src="public/images/image-24534.png" width="100%" alt="" />
@@ -57,7 +60,7 @@ const Blog = () => {
                                 </div>
                             </NavLink>
                         </div>
-                        <div class="col-lg-4 col-md-6 FadeUp mb-3">
+                        <div class="col-lg-4 col-md-6 fadeUp mb-3">
                             <NavLink to="/blog-detail">
                                 <div class="border p-2 rounded-3 bg-white">
                                     <img src="public/images/image-24534.png" width="100%" alt="" />
@@ -81,6 +84,8 @@ const Blog = () => {
                     <button class="btn btn-dark mx-auto mt-3 d-block">Load More</button>
                 </div>
             </section>
+
+            <GSAP/>
         </>
     )
 }

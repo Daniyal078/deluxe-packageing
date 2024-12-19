@@ -1,11 +1,68 @@
 import React from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
+
+
 
 const Processing = () => {
+
+
+    useGSAP(() => {
+
+        gsap.utils.toArray(".fadeUp").forEach((fadeUp) => {
+            gsap.from(fadeUp, {
+                y: 50,
+                delay: 0.1,
+                duration: 1.6,
+                opacity: 0,
+                id: "example",
+                stagger: 10,
+                // delay: 0.2,
+                scrollTrigger: {
+                    trigger: fadeUp,
+                    scroller: "body",
+                    // markers: true,
+                    start: "top 65%",
+                },
+            });
+        });
+
+
+        gsap.from('.fadeRight', {
+            // x: 30,
+            scale: 0.5,
+            ease: "bounce",
+            opacity: 0,
+            duration: 1.5,
+            delay: 0.4
+        })
+
+
+        gsap.utils.toArray('.fadeLeft').forEach((fadeLeft) => {
+
+            gsap.from(fadeLeft, {
+                x: -30,
+                opacity: 0,
+                duration: 1,
+                delay: 0.4,
+                scrollTrigger: {
+                    trigger: fadeLeft,
+                    scroller: "body",
+                    // markers: true,
+                    start: "top 65%",
+                },
+            })
+        })
+    })
+
+
     return (
         <>
             <section className='bg-main-light'>
                 <div className='bg-white py-5 rounded-bottom-5'>
-                    <div className="container">
+                    <div className="container fadeLeft">
                         <div className='display-5 fw-bold'>Processing.</div>
                         <div className='fs-5'>Processing in printing refers to the preparation and treatment of
                             materials or files to ensure they are ready for high-quality printing output.</div>
@@ -15,7 +72,7 @@ const Processing = () => {
 
 
             <section className='bg-main-light py-5'>
-                <div className="container">
+                <div className="container fadeUp">
                     <div className='fs-1 fw-bold'>Pre <span className='text-main'>Press</span>.</div>
                     <div>
                         <img className='my-3' src="public/images/image-790879.png" width={'100%'} alt="" />
@@ -55,7 +112,7 @@ const Processing = () => {
 
             <section className='bg-main-light'>
                 <div className='bg-white py-5 rounded-5'>
-                    <div className="container">
+                    <div className="container fadeUp">
                         <div className='fs-1 fw-bold text-main'>Press.</div>
                         <div>
                             <img className='my-3' src="public/images/image-0986.png" width={'100%'} alt="" />
@@ -89,7 +146,7 @@ const Processing = () => {
 
 
             <section className='bg-main-light py-5'>
-                <div className="container">
+                <div className="container fadeUp">
                     <div className='fs-1 fw-bold'>Post <span className='text-main'>Press</span>.</div>
                     <div>
                         <img className='my-3' src="public/images/image-7865.png" width={'100%'} alt="" />

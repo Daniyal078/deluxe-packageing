@@ -13,13 +13,10 @@ import ContactUs from './Components/ContactUs'
 import Equipment from './Components/Equipment'
 import Blog from './Components/Blog'
 import BlogsDetail from './Components/BlogsDetail'
-// import LoadingBar from 'react-top-loading-bar'
-
 
 
 
 function App() {
-
   const router = createBrowserRouter([
     {
       path: '/',

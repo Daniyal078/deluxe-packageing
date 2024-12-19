@@ -1,8 +1,10 @@
 import React from 'react'
-
 import Slider from 'react-slick';
+import GSAP from './GSAP';
+
 
 const AboutUs = () => {
+
     const settings = {
         dots: false,
         infinite: true,
@@ -13,7 +15,7 @@ const AboutUs = () => {
         initialSlide: 0,
         autoplay: true,
         autoplaySpeed: 1000,
-        rtl: true,
+        // rtl: true,
 
         responsive: [
             {
@@ -116,7 +118,7 @@ const AboutUs = () => {
             <section className='bg-main-light'>
                 <div className='py-5 bg-white rounded-bottom-5'>
                     <div className="container">
-                        <div className='py-4'>
+                        <div className='py-4 fadeLeft'>
                             <div className='display-4 fw-bold'>Your <span className='text-main'> Packaging Partner</span>.</div>
                             <p className='fs-5'>Crafting packaging excellence, delivering your brand’s success.</p>
                         </div>
@@ -126,8 +128,8 @@ const AboutUs = () => {
 
             <section className='bg-main-light rounded-bottom-5'>
                 <div className="container">
-                    <div className="row position-relative" style={{ top: '-60px' }}>
-                        <div className="col-lg-4 col-md-4">
+                    <div className="row gap-lg-0 gap-md-0 gap-4 position-relative" style={{ top: '-60px' }}>
+                        <div className="col-lg-4 col-md-4 fadeUp">
                             <div className='shadow p-4 rounded-4 text-center h-100 bg-white'>
                                 <img src={"public/images/Layer-0589.png"} alt="" />
                                 <div className='fs-3 fw-bold my-2'>MISSION</div>
@@ -136,7 +138,7 @@ const AboutUs = () => {
                                     qualified human capital, superior services and state of the art technology.</div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-4">
+                        <div className="col-lg-4 col-md-4 fadeUp">
                             <div className='shadow p-4 rounded-4 text-center h-100 bg-white'>
                                 <img src={"public/images/Layer_109.png"} alt="" />
                                 <div className='fs-3 fw-bold my-2'>Vision</div>
@@ -145,7 +147,7 @@ const AboutUs = () => {
                                     state of the art technology.</div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-4">
+                        <div className="col-lg-4 col-md-4 fadeUp">
                             <div className='shadow p-4 rounded-4 text-center h-100 bg-white'>
                                 <img src={"public/images/Layer_10982.png"} alt="" />
                                 <div className='fs-3 fw-bold my-2'>Values</div>
@@ -160,7 +162,7 @@ const AboutUs = () => {
 
             <section className='bg-main-light'>
                 <div className='bg-white py-5 rounded-bottom-5'>
-                    <div className="container">
+                    <div className="container fadeUp">
                         <div className='fs-1 fw-bold text-main'>PRODUCTIVITY PROGRESS</div>
 
                         <div className='fw-medium fs-5 my-3'>DELUXE PACKAGES IS NOW ONE OF THE LEADING OFFSET PRINTING PRESS IN KARACHI PAKISTAN</div>
@@ -178,7 +180,7 @@ const AboutUs = () => {
 
             <section className='bg-white'>
                 <div className='bg-main-light py-5 rounded-bottom-5'>
-                    <div className="container">
+                    <div className="container fadeUp">
                         <div className='fs-1 fw-bold text-main'>Values</div>
                         <div className='fs-5 fw-medium'>"WE DO NOT SELL INK ON PAPER , WELL SELL WAYS TO COMMUNICATE"</div>
 
@@ -284,7 +286,7 @@ const AboutUs = () => {
             <section className='bg-main-light py-5'>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6 col-md-6">
+                        <div className="col-lg-6 col-md-6 fadeLeft">
                             <div className='position-sticky top-0 py-5'>
                                 <div className='display-3 fw-bold'>Our Team <span className='text-main'>.</span></div>
                                 <div className='fw-medium fs-3'>"Our team focuses on delivering <br />
@@ -296,37 +298,37 @@ const AboutUs = () => {
                         <div className="col-lg-6 col-md-6">
                             <div>
                                 <div>
-                                    <div className='text-center d-inline-block'>
+                                    <div className='text-center d-inline-block fadeUp'>
                                         <img className='rounded-circle' src="https://templatekit.jegtheme.com/wrapmax/wp-content/uploads/sites/393/2023/06/muscles-posing-o-5HR5KZN.jpg" width={'200vw'} alt="" />
                                         <div className=''><img src="public/Ellipse 5.png" width={'20'} alt="" /> James Miller</div>
                                     </div>
                                 </div>
                                 <div className='text-end'>
-                                    <div className='text-center d-inline-block'>
+                                    <div className='text-center d-inline-block fadeUp'>
                                         <img className='rounded-circle' src="https://templatekit.jegtheme.com/wrapmax/wp-content/uploads/sites/393/2023/06/young-businesswoman-in-glasses-and-white-turtlenec-4SEPDJP.jpg" width={'200vw'} alt="" />
                                         <div className=''><img src="public/Ellipse 5.png" width={'20'} alt="" /> James Miller</div>
                                     </div>
                                 </div>
                                 <div>
-                                    <div className='text-center d-inline-block'>
+                                    <div className='text-center d-inline-block fadeUp'>
                                         <img className='rounded-circle' src="https://templatekit.jegtheme.com/wrapmax/wp-content/uploads/sites/393/2023/06/guy-wearing-white-t-WEYM2ZW.jpg" width={'200vw'} alt="" />
                                         <div className=''><img src="public/Ellipse 5.png" width={'20'} alt="" /> James Miller</div>
                                     </div>
                                 </div>
                                 <div className='text-end'>
-                                    <div className='text-center d-inline-block'>
+                                    <div className='text-center d-inline-block fadeUp'>
                                         <img className='rounded-circle' src="https://templatekit.jegtheme.com/wrapmax/wp-content/uploads/sites/393/2023/06/photo-of-handsome-man-has-confident-serious-expres-NYBB4EY.jpg" width={'200vw'} alt="" />
                                         <div className=''><img src="public/Ellipse 5.png" width={'20'} alt="" /> James Miller</div>
                                     </div>
                                 </div>
                                 <div>
-                                    <div className='text-center d-inline-block'>
+                                    <div className='text-center d-inline-block fadeUp'>
                                         <img className='rounded-circle' src="https://templatekit.jegtheme.com/wrapmax/wp-content/uploads/sites/393/2023/06/young-businesswoman-in-glasses-and-white-turtlenec-4SEPDJP.jpg" width={'200vw'} alt="" />
                                         <div className=''><img src="public/Ellipse 5.png" width={'20'} alt="" /> James Miller</div>
                                     </div>
                                 </div>
                                 <div className='text-end'>
-                                    <div className='text-center d-inline-block'>
+                                    <div className='text-center d-inline-block fadeUp'>
                                         <img className='rounded-circle' src="https://templatekit.jegtheme.com/wrapmax/wp-content/uploads/sites/393/2023/06/guy-wearing-white-t-WEYM2ZW.jpg" width={'200vw'} alt="" />
                                         <div className=''><img src="public/Ellipse 5.png" width={'20'} alt="" /> James Miller</div>
                                     </div>
@@ -343,12 +345,14 @@ const AboutUs = () => {
             <section className='bg-main-light'>
                 <div className='py-5 rounded-5 bg-white'>
                     <div className="container">
-                        <div className='display-5 fw-bold text-center'>What we do?</div>
-                        <div className='text-center fw-semibold'>Deluxe Packages is offering following services</div>
+                        <div className='fadeLeft'>
+                            <div className='display-5 fw-bold text-center'>What we do?</div>
+                            <div className='text-center fw-semibold'>Deluxe Packages is offering following services</div>
+                        </div>
                         <div className="row justify-content-center my-4">
                             {WWD.map(items => {
                                 return (
-                                    <div className="col-lg-2 col-md-3 col-6 my-2">
+                                    <div className="col-lg-2 col-md-3 col-6 my-2 fadeUp">
                                         <div className='d-flex flex-column gap-3 align-items-center rounded-2 shadow-sm bg-main-light text-center p-3 py-4 h-100'>
                                             <img src={items.img} alt="" width={'50'} height={'50'} />
                                             <div className='fw-bold'>{items.title}</div>
@@ -381,7 +385,7 @@ const AboutUs = () => {
                         </div>
 
 
-                        <div className="col-lg-5">
+                        <div className="col-lg-5 fadeUp">
                             <div>
                                 <img src="public/images/image 26.png" width={'100%'} alt="" />
                             </div>
@@ -389,6 +393,9 @@ const AboutUs = () => {
                     </div>
                 </div>
             </section>
+
+
+            <GSAP/>
         </>
     )
 }
